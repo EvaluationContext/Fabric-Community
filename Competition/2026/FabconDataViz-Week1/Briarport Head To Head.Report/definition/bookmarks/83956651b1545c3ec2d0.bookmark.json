@@ -45,7 +45,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fp_Metrics, Ranks and Medals"
+                          "Entity": "fp_Metrics, Ranks & Medals for Per Metric Table"
                         }
                       },
                       "Property": "Metric Name"
@@ -68,7 +68,7 @@
                             "From": [
                               {
                                 "Name": "f",
-                                "Entity": "fp_Metrics, Ranks and Medals",
+                                "Entity": "fp_Metrics, Ranks & Medals for Per Metric Table",
                                 "Type": 0
                               }
                             ],
@@ -140,7 +140,7 @@
                     "From": [
                       {
                         "Name": "m",
-                        "Entity": "fp_Metrics, Ranks and Medals",
+                        "Entity": "fp_Metrics, Ranks & Medals for Per Metric Table",
                         "Type": 0
                       }
                     ],
@@ -178,7 +178,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fp_Metrics, Ranks and Medals"
+                          "Entity": "fp_Metrics, Ranks & Medals for Per Metric Table"
                         }
                       },
                       "Property": "Type"
@@ -345,7 +345,7 @@
                     "From": [
                       {
                         "Name": "m",
-                        "Entity": "fp_Metrics, Ranks and Medals",
+                        "Entity": "fp_Metrics, Ranks & Medals for Per Metric Table",
                         "Type": 0
                       }
                     ],
@@ -383,7 +383,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fp_Metrics, Ranks and Medals"
+                          "Entity": "fp_Metrics, Ranks & Medals for Per Metric Table"
                         }
                       },
                       "Property": "Type"
@@ -1535,7 +1535,7 @@
                     "From": [
                       {
                         "Name": "s",
-                        "Entity": "small multi",
+                        "Entity": "sm_Metrics & Rank",
                         "Type": 0
                       }
                     ],
@@ -1573,7 +1573,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "small multi"
+                          "Entity": "sm_Metrics & Rank"
                         }
                       },
                       "Property": "Type"
@@ -1618,7 +1618,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "small multi"
+                          "Entity": "sm_Metrics & Rank"
                         }
                       },
                       "Property": "Small Multi Metric"
@@ -1633,7 +1633,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "small multi"
+                          "Entity": "sm_Metrics & Rank"
                         }
                       },
                       "Property": "Metric"
@@ -1696,7 +1696,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "small multi"
+                          "Entity": "sm_Metrics & Rank"
                         }
                       },
                       "Property": "Type"
@@ -1741,7 +1741,7 @@
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "small multi"
+                          "Entity": "sm_Metrics & Rank"
                         }
                       },
                       "Property": "Small Multi Metric"
@@ -1756,7 +1756,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "small multi"
+                          "Entity": "sm_Metrics & Rank"
                         }
                       },
                       "Property": "Metric"

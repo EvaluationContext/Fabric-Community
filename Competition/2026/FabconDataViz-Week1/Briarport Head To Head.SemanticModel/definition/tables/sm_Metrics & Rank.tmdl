@@ -1,23 +1,23 @@
-table 'small multi'
+table 'sm_Metrics & Rank'
 	lineageTag: 42c8dd37-ec04-4fb7-9fa3-17ef1e3b5b11
 
 	measure 'Small Multi Metric' =
 			
-			var metric = SELECTEDVALUE( 'small multi'[Metric] )
-			var metricType = SELECTEDVALUE( 'small multi'[type] )
+			var metric = SELECTEDVALUE( 'sm_Metrics & Rank'[Metric] )
+			var metricType = SELECTEDVALUE( 'sm_Metrics & Rank'[type] )
 			RETURN
 			SWITCH(
 			    true,
-			    metricType = "Rank" && metric = "Emissions", [Emissions Rank],
-			    metricType = "Rank" && metric = "Green Space", [Green Space Rank],
-			    metricType = "Rank" && metric = "Housing Affordability", [Housing Affordability Rank],
-			    metricType = "Rank" && metric = "Transit", [Transit Rank],
-			    metricType = "Rank" && metric = "Livability", [Livability Rank],
-			    metricType = "Metric" && metric = "Emissions", [Emissions TY],
-			    metricType = "Metric" && metric = "Green Space", [Green Space TY] * 100,
-			    metricType = "Metric" && metric = "Housing Affordability", [Housing Affordability TY],
-			    metricType = "Metric" && metric = "Transit", [Transit TY],
-			    metricType = "Metric" && metric = "Livability", [Livability TY]
+			    metricType = "Rank" && metric = "Emissions", [Emissions Rank Selected City],
+			    metricType = "Rank" && metric = "Green Space", [Green Space Rank Selected City],
+			    metricType = "Rank" && metric = "Housing Affordability", [Housing Affordability Rank Selected City],
+			    metricType = "Rank" && metric = "Transit", [Transit Rank Selected City],
+			    metricType = "Rank" && metric = "Livability", [Livability Rank Selected City],
+			    metricType = "Metric" && metric = "Emissions", [Emissions TY Selected City],
+			    metricType = "Metric" && metric = "Green Space", [Green Space TY Selected City] * 100,
+			    metricType = "Metric" && metric = "Housing Affordability", [Housing Affordability TY Selected City],
+			    metricType = "Metric" && metric = "Transit", [Transit TY Selected City],
+			    metricType = "Metric" && metric = "Livability", [Livability TY Selected City]
 			)
 		lineageTag: 456ce65a-6ea0-4e98-8622-0cf6491d0141
 
@@ -39,7 +39,7 @@ table 'small multi'
 
 		annotation SummarizationSetBy = Automatic
 
-	partition 'small multi' = calculated
+	partition 'sm_Metrics & Rank' = calculated
 		mode: import
 		source =
 				

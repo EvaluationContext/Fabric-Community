@@ -4,7 +4,7 @@
   "position": {
     "x": 324.03022670025189,
     "y": 552.54408060453409,
-    "z": 4031,
+    "z": 2000,
     "height": 420.75566750629724,
     "width": 1178.8413098236776,
     "tabOrder": 2000
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "City Lookup"
+                      "Entity": "Cities"
                     }
                   },
                   "Property": "City"
                 }
               },
-              "queryRef": "City Lookup.City",
-              "nativeQueryRef": "City"
+              "queryRef": "Cities.City",
+              "nativeQueryRef": "City1"
             },
             {
               "field": {
@@ -37,10 +37,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Emissions TY"
+                  "Property": "Emissions TY Selected City"
                 }
               },
-              "queryRef": "City Metrics.Emissions TY",
+              "queryRef": "City Metrics.Emissions TY Selected City",
               "nativeQueryRef": "Emissions",
               "displayName": "Emissions"
             },
@@ -52,10 +52,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Emissions Rank"
+                  "Property": "Emissions Rank Selected City"
                 }
               },
-              "queryRef": "City Metrics.Emissions Rank",
+              "queryRef": "City Metrics.Emissions Rank Selected City",
               "nativeQueryRef": "Rank",
               "displayName": "Rank"
             },
@@ -67,10 +67,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Emission Medal"
+                  "Property": "Emission Medal Selected City"
                 }
               },
-              "queryRef": "City Metrics.Emission Medal",
+              "queryRef": "City Metrics.Emission Medal Selected City",
               "nativeQueryRef": "1",
               "displayName": "1"
             },
@@ -82,10 +82,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Green Space TY"
+                  "Property": "Green Space TY Selected City"
                 }
               },
-              "queryRef": "City Metrics.Green Space TY",
+              "queryRef": "City Metrics.Green Space TY Selected City",
               "nativeQueryRef": "Green Space",
               "displayName": "Green Space"
             },
@@ -97,10 +97,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Green Space Rank"
+                  "Property": "Green Space Rank Selected City"
                 }
               },
-              "queryRef": "City Metrics.Green Space Rank",
+              "queryRef": "City Metrics.Green Space Rank Selected City",
               "nativeQueryRef": "Rank1",
               "displayName": "Rank"
             },
@@ -112,10 +112,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Green Space Medal"
+                  "Property": "Green Space Medal Selected City"
                 }
               },
-              "queryRef": "City Metrics.Green Space Medal",
+              "queryRef": "City Metrics.Green Space Medal Selected City",
               "nativeQueryRef": "2",
               "displayName": "2"
             },
@@ -127,10 +127,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Housing Affordability TY"
+                  "Property": "Housing Affordability TY Selected City"
                 }
               },
-              "queryRef": "City Metrics.Housing Affordability TY",
+              "queryRef": "City Metrics.Housing Affordability TY Selected City",
               "nativeQueryRef": "Housing Affordability",
               "displayName": "Housing Affordability"
             },
@@ -142,10 +142,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Housing Affordability Rank"
+                  "Property": "Housing Affordability Rank Selected City"
                 }
               },
-              "queryRef": "City Metrics.Housing Affordability Rank",
+              "queryRef": "City Metrics.Housing Affordability Rank Selected City",
               "nativeQueryRef": "Rank2",
               "displayName": "Rank"
             },
@@ -157,10 +157,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Housing Affordability Medal"
+                  "Property": "Housing Affordability Medal Selected City"
                 }
               },
-              "queryRef": "City Metrics.Housing Affordability Medal",
+              "queryRef": "City Metrics.Housing Affordability Medal Selected City",
               "nativeQueryRef": "3",
               "displayName": "3"
             },
@@ -172,10 +172,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Transit TY"
+                  "Property": "Transit TY Selected City"
                 }
               },
-              "queryRef": "City Metrics.Transit TY",
+              "queryRef": "City Metrics.Transit TY Selected City",
               "nativeQueryRef": "Transit",
               "displayName": "Transit"
             },
@@ -187,10 +187,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Transit Rank"
+                  "Property": "Transit Rank Selected City"
                 }
               },
-              "queryRef": "City Metrics.Transit Rank",
+              "queryRef": "City Metrics.Transit Rank Selected City",
               "nativeQueryRef": "Rank3",
               "displayName": "Rank"
             },
@@ -202,10 +202,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Transit Medal"
+                  "Property": "Transit Medal Selected City"
                 }
               },
-              "queryRef": "City Metrics.Transit Medal",
+              "queryRef": "City Metrics.Transit Medal Selected City",
               "nativeQueryRef": "4",
               "displayName": "4"
             },
@@ -217,10 +217,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Livability TY"
+                  "Property": "Livability TY Selected City"
                 }
               },
-              "queryRef": "City Metrics.Livability TY",
+              "queryRef": "City Metrics.Livability TY Selected City",
               "nativeQueryRef": "Livability",
               "displayName": "Livability"
             },
@@ -232,10 +232,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Livability Rank"
+                  "Property": "Livability Rank Selected City"
                 }
               },
-              "queryRef": "City Metrics.Livability Rank",
+              "queryRef": "City Metrics.Livability Rank Selected City",
               "nativeQueryRef": "Rank4",
               "displayName": "Rank"
             },
@@ -247,10 +247,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Livability Medal"
+                  "Property": "Livability Medal Selected City"
                 }
               },
-              "queryRef": "City Metrics.Livability Medal",
+              "queryRef": "City Metrics.Livability Medal Selected City",
               "nativeQueryRef": "5",
               "displayName": "5"
             }
@@ -261,7 +261,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fp_metrics"
+                      "Entity": "fp_Metrics, Ranks and Medals"
                     }
                   },
                   "Property": "fp_metrics"
@@ -280,7 +280,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "City Lookup"
+                    "Entity": "Cities"
                   }
                 },
                 "Property": "City"
@@ -369,6 +369,25 @@
                   "Value": "4D"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
             }
           }
         }
@@ -398,52 +417,6 @@
         },
         {
           "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "City Metrics"
-                        }
-                      },
-                      "Property": "Is Briarport Value Colour"
-                    }
-                  }
-                }
-              }
-            },
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "City Metrics"
-                        }
-                      },
-                      "Property": "Is Briarport Background Colour"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "City Lookup.City"
-          }
-        },
-        {
-          "properties": {
             "backColor": {
               "solid": {
                 "color": {
@@ -470,7 +443,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -516,7 +489,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -562,7 +535,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -698,7 +671,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -744,7 +717,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -790,7 +763,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -836,7 +809,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -882,7 +855,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -1109,26 +1082,747 @@
             ],
             "metadata": "City Metrics.Livability TY"
           }
-        }
-      ],
-      "columnFormatting": [
+        },
         {
           "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
                 }
               }
             },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
                 }
               }
             }
           },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Cities.City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Emission Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Green Space Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Housing Affordability Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Transit Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Livability Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Emissions TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Emissions Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Green Space Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Housing Affordability Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Transit Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Livability Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Green Space TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Housing Affordability TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Transit TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Livability TY Selected City"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {},
           "selector": {
             "metadata": "City Metrics.Emission Index TY"
           }
@@ -1188,13 +1882,6 @@
                   "Literal": {
                     "Value": "1L"
                   }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
                 }
               }
             }
@@ -1260,13 +1947,6 @@
                   }
                 }
               }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
-                }
-              }
             }
           },
           "selector": {
@@ -1328,13 +2008,6 @@
                   "Literal": {
                     "Value": "1L"
                   }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
                 }
               }
             }
@@ -1400,13 +2073,6 @@
                   }
                 }
               }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
-                }
-              }
             }
           },
           "selector": {
@@ -1470,13 +2136,6 @@
                   }
                 }
               }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
-                }
-              }
             }
           },
           "selector": {
@@ -1484,131 +2143,31 @@
           }
         },
         {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "metadata": "City Metrics.Emission Medal"
           }
         },
         {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "metadata": "City Metrics.Livability Medal"
           }
         },
         {
-          "properties": {
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "metadata": "City Metrics.Transit Medal"
           }
         },
         {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "metadata": "City Metrics.Housing Affordability Medal"
           }
         },
         {
-          "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "metadata": "City Metrics.Green Space Medal"
           }
@@ -1618,23 +2177,239 @@
           "selector": {
             "metadata": "City Metrics.Emissions Rank"
           }
-        }
-      ],
-      "columnWidth": [
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "City Metrics.Emissions Rank Selected City"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "City Metrics.Green Space Rank Selected City"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "City Metrics.Housing Affordability Rank Selected City"
+          }
+        },
         {
           "properties": {
-            "value": {
+            "styleHeader": {
               "expr": {
                 "Literal": {
-                  "Value": "104D"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
           },
           "selector": {
-            "metadata": "City Lookup.City"
+            "metadata": "City Metrics.Emission Medal Selected City"
           }
         },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Green Space Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Housing Affordability Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Transit Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Livability Medal Selected City"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "City Metrics.Transit Rank Selected City"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "City Metrics.Livability Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Green Space TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Emissions TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Housing Affordability TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Transit TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Livability TY Selected City"
+          }
+        }
+      ],
+      "columnWidth": [
         {
           "properties": {
             "value": {
@@ -1844,6 +2619,230 @@
           "selector": {
             "metadata": "City Metrics.Livability Rank"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.0462574489444D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Emissions TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "48.41483497219656D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Emissions Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "100.3236976344472D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Green Space TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "47.61296164061377D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Green Space Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.24630985568368D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Housing Affordability TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "47.62392070526578D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Housing Affordability Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.2196326106554D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Transit TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "49.79784416967545D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Transit Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90.12138046517506D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Livability TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "49.79784416967545D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Livability Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "71.78706726618199D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Emission Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "74.05295242296356D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Green Space Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60.44998651869753D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Housing Affordability Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72.91997999078032D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Transit Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.92539350803153D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Livability Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "104D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Cities.City"
+          }
         }
       ]
     },
@@ -1964,6 +2963,26 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -1971,230 +2990,304 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "60ae4942e0a0c7bbbe9c",
+        "name": "22a6615408d1462328ec",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Emissions TY Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "1f939ed9ca29e29b0154",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Emissions Rank Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "97bf7300d4a59b194bd5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Green Space TY Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "0038f91e40e7621e6c41",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Green Space Rank Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "16797c037317ac989188",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Housing Affordability TY Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "6c66029f5b3e52abee43",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Housing Affordability Rank Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "9de6752705220172dd47",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Transit TY Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "0b5fd7fa0a5e8aa29ba4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Transit Rank Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "61351880d80002920186",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Livability TY Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "1bb1f0c096ec368902a3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Livability Rank Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "4c705cb997070d0892e9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Emission Medal Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "e939419b1ea26b70394d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Green Space Medal Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "81e337f01a93e60305c1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Housing Affordability Medal Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "4d4dbd613002eb3a0de0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Transit Medal Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "57a7642753dad0b0067c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Livability Medal Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "f54ffbf55577e79eb29c",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "City Lookup"
+                "Entity": "Cities"
               }
             },
             "Property": "City"
           }
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "ecd49d6816a97a82a085",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "Cities",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "c"
+                              }
+                            },
+                            "Property": "City"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Selected City'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
               }
-            },
-            "Property": "Emissions TY"
-          }
+            }
+          ]
         },
-        "type": "Advanced"
-      },
-      {
-        "name": "78dd3bf38127200754c1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true,
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
               }
-            },
-            "Property": "Green Space TY"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "57f8ce5c71b509560812",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Housing Affordability TY"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "56f47aa30024652155d7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Transit TY"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "73319baa1bb82c5e3e7d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Livability TY"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "bc67e40e6a3b2ee0bea5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Emission Medal"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "aefc3c2f41cb079ebbd3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Green Space Medal"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9b62a48bbce2493a7608",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Housing Affordability Medal"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4c09d8f2703502e6001d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Transit Medal"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1561d3549b1e11028eb2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Livability Medal"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e01da76a0e2062d7a3e0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Emissions Rank"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7774c83904546d900c97",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Green Space Rank"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d28927b53d030ad0ad91",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Housing Affordability Rank"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "299399d127d958ee0985",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Transit Rank"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6df0a2cb55a63ea8ea5c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "City Metrics"
-              }
-            },
-            "Property": "Livability Rank"
-          }
-        },
-        "type": "Advanced"
+            }
+          ]
+        }
       }
     ]
-  },
-  "isHidden": true
+  }
 }

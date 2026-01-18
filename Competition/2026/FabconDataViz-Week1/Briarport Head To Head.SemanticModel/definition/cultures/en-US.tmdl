@@ -1887,7 +1887,7 @@ cultureInfo en-US
 			    "metrics": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fp_Metrics, Ranks and Medals"
+			          "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table"
 			        }
 			      },
 			      "State": "Generated",
@@ -1902,7 +1902,7 @@ cultureInfo en-US
 			    "metrics.metric": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fp_Metrics, Ranks and Medals",
+			          "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table",
 			          "ConceptualProperty": "Metric"
 			        }
 			      },
@@ -1918,7 +1918,7 @@ cultureInfo en-US
 			    "metrics.metrics_field": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fp_Metrics, Ranks and Medals",
+			          "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table",
 			          "ConceptualProperty": "Metrics Fields"
 			        }
 			      },
@@ -2043,7 +2043,7 @@ cultureInfo en-US
 			    "metrics.metrics_order": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fp_Metrics, Ranks and Medals",
+			          "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table",
 			          "ConceptualProperty": "Metrics Order"
 			        }
 			      },
@@ -2168,7 +2168,7 @@ cultureInfo en-US
 			    "metrics.type": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fp_Metrics, Ranks and Medals",
+			          "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table",
 			          "ConceptualProperty": "Type"
 			        }
 			      },
@@ -2777,45 +2777,11 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "city_metrics.is_atlanta_background_colour": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "City Metrics",
-			          "ConceptualProperty": "Is Briarport Background Colour"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "is atlanta background colour": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "colour": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "background colour": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "atlanta background colour": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        }
-			      ]
-			    },
 			    "city_metrics.is_atlanta_value_colour": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "City Metrics",
-			          "ConceptualProperty": "Is Briarport Value Colour"
+			          "ConceptualProperty": "Briarport and Selected City Font Color"
 			        }
 			      },
 			      "State": "Generated",
@@ -5404,7 +5370,7 @@ cultureInfo en-US
 			    "metrics.metric_name": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fp_Metrics, Ranks and Medals",
+			          "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table",
 			          "ConceptualProperty": "Metric Name"
 			        }
 			      },
@@ -6058,7 +6024,7 @@ cultureInfo en-US
 			    },
 			    "metrics_has_metric_name": {
 			      "Binding": {
-			        "ConceptualEntity": "fp_Metrics, Ranks and Medals"
+			        "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8368,7 +8334,7 @@ cultureInfo en-US
 			    },
 			    "metrics_has_type": {
 			      "Binding": {
-			        "ConceptualEntity": "fp_Metrics, Ranks and Medals"
+			        "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8401,7 +8367,7 @@ cultureInfo en-US
 			    },
 			    "metrics_has_metric": {
 			      "Binding": {
-			        "ConceptualEntity": "fp_Metrics, Ranks and Medals"
+			        "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -8599,7 +8565,7 @@ cultureInfo en-US
 			    },
 			    "metrics_has_city_metrics_metric_icon": {
 			      "Binding": {
-			        "ConceptualEntity": "fp_Metrics, Ranks and Medals"
+			        "ConceptualEntity": "fp_Metrics, Ranks & Medals for Per Metric Table"
 			      },
 			      "State": "Generated",
 			      "Roles": {

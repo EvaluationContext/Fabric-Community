@@ -4,7 +4,7 @@
   "position": {
     "x": 30.747330960854089,
     "y": 60.355871886120994,
-    "z": 10000,
+    "z": 9000,
     "height": 45.55160142348754,
     "width": 782.34875444839849,
     "tabOrder": -1
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "How does Briarport compare to peer cities in housing, transit, and sustainability",
+                    "value": "How does Briarport compare to peer cities in housing, transit, and sustainability (2015-2024)",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "12pt",

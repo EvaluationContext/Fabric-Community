@@ -1552,7 +1552,8 @@
             "Property": "City"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "isHiddenInViewMode": true
       },
       {
         "name": "07b92a70261c3442bee4",
@@ -1567,7 +1568,8 @@
             "Property": "Selected Moniker"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "isHiddenInViewMode": true
       }
     ],
     "filterSortOrder": "Custom"

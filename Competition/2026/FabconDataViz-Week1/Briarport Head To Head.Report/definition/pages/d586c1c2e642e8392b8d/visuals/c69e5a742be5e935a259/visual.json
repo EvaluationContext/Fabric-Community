@@ -1595,6 +1595,8 @@
             }
           ]
         },
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true,
         "objects": {
           "general": [
             {
@@ -1602,6 +1604,21 @@
             }
           ]
         }
+      },
+      {
+        "name": "0ebe4b5f2e2603588ea4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Monikers"
+              }
+            },
+            "Property": "Selected Moniker"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
       }
     ]
   }

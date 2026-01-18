@@ -1,0 +1,20 @@
+table Cities
+	lineageTag: 22fa92d7-ca3a-4705-9b64-a2bab349774c
+
+	column City
+		lineageTag: 3781f36f-7875-4816-8cba-4f3a28bc7772
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: City Lookup[City]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Cities = calculated
+		mode: import
+		source = ```
+				
+				    UNION( VALUES( 'City Lookup'[City] ), { "Selected City" }  )
+				```
+
+	annotation PBI_Id = 6b8e0f58352a4452ac0b97cac8a49061
+

@@ -18,10 +18,11 @@ annotation __TEdtr = 1
 ref table 'City Lookup'
 ref table 'City Metrics'
 ref table Date
-ref table 'fp_Metrics, Ranks and Medals'
+ref table 'fp_Metrics, Ranks & Medals for Per Metric Table'
 ref table Monikers
-ref table fp_metrics
-ref table 'small multi'
+ref table 'fp_Metrics, Ranks and Medals'
+ref table 'sm_Metrics & Rank'
+ref table Cities
 
 ref cultureInfo en-US
 

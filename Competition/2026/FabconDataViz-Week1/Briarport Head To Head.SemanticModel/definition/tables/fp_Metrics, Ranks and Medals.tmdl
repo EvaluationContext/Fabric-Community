@@ -1,23 +1,23 @@
 table 'fp_Metrics, Ranks and Medals'
-	lineageTag: 0738d781-b26d-47c4-bff7-5ec7df37f9b0
+	lineageTag: 993e8761-c612-4c6d-9b67-73c157421674
 
-	column Metric
-		lineageTag: 427f14b8-ea35-4fb1-b922-3544c7b9d271
+	column fp_metrics
+		lineageTag: 7feb4c11-a846-4f88-b31d-f97b68429532
 		summarizeBy: none
 		sourceColumn: [Value1]
-		sortByColumn: 'Metrics Order'
+		sortByColumn: 'fp_metrics Order'
 
 		relatedColumnDetails
-			groupByColumn: 'Metrics Fields'
+			groupByColumn: 'fp_metrics Fields'
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Metrics Fields'
+	column 'fp_metrics Fields'
 		isHidden
-		lineageTag: eb9d010a-3932-454c-a280-93a2283fc345
+		lineageTag: 06de9765-3abb-4e46-95bf-318f79a16876
 		summarizeBy: none
 		sourceColumn: [Value2]
-		sortByColumn: 'Metrics Order'
+		sortByColumn: 'fp_metrics Order'
 
 		extendedProperty ParameterMetadata =
 				{
@@ -27,26 +27,12 @@ table 'fp_Metrics, Ranks and Medals'
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Metrics Order'
+	column 'fp_metrics Order'
 		isHidden
 		formatString: 0
-		lineageTag: fe365ea6-2d12-4154-897f-bffbb4960897
+		lineageTag: d74e2d6f-b321-48d1-a3d1-0899885620fe
 		summarizeBy: sum
 		sourceColumn: [Value3]
-
-		annotation SummarizationSetBy = Automatic
-
-	column Type
-		lineageTag: 32c6420d-41b9-4f10-8e53-c505fe20f16a
-		summarizeBy: none
-		sourceColumn: [Value4]
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Metric Name'
-		lineageTag: 2489c381-d824-45f2-bfdf-4e9b6bf2c9af
-		summarizeBy: none
-		sourceColumn: [Value5]
 
 		annotation SummarizationSetBy = Automatic
 
@@ -54,22 +40,22 @@ table 'fp_Metrics, Ranks and Medals'
 		mode: import
 		source =
 				{
-				    ("Metric", NAMEOF('City Metrics'[Emissions TY]), 0, "Metric", "Emissions"),
-				    ("Metric", NAMEOF('City Metrics'[Green Space TY]), 1, "Metric", "Green Space"),
-				    ("Metric", NAMEOF('City Metrics'[Housing Affordability TY]), 2, "Metric", "Housing Affordability"),
-				    ("Metric", NAMEOF('City Metrics'[Transit TY]), 3, "Metric", "Transit"),
-				    ("Metric", NAMEOF('City Metrics'[Livability TY]), 4, "Metric", "Livability"),
-				    ("Rank", NAMEOF('City Metrics'[Emissions Rank]), 5, "Rank", "Emissions"),
-				    ("Rank", NAMEOF('City Metrics'[Green Space Rank]), 6, "Rank", "Green Space"),
-				    ("Rank", NAMEOF('City Metrics'[Housing Affordability Rank]), 7, "Rank", "Housing Affordability"),
-				    ("Rank", NAMEOF('City Metrics'[Transit Rank]), 8, "Rank", "Transit"),
-				    ("Rank", NAMEOF('City Metrics'[Livability Rank]), 9, "Rank", "Livability"),
-				    ("Medal", NAMEOF('City Metrics'[Emission Medal]), 10, "Medal", "Emissions"),
-				    ("Medal", NAMEOF('City Metrics'[Green Space Medal]), 11, "Medal", "Green Space"),
-				    ("Medal", NAMEOF('City Metrics'[Housing Affordability Medal]), 12, "Medal", "Housing Affordability"),
-				    ("Medal", NAMEOF('City Metrics'[Transit Medal]), 13, "Medal", "Transit"),
-				    ("Medal", NAMEOF('City Metrics'[Livability Medal]), 14, "Medal", "Livability")
+				    ("Emissions", NAMEOF('City Metrics'[Emissions TY Selected City]), 0),
+				    ("Rank", NAMEOF('City Metrics'[Emissions Rank Selected City]), 1),
+				    ("1", NAMEOF('City Metrics'[Emission Medal Selected City]), 2),
+				    ("Green Space", NAMEOF('City Metrics'[Green Space TY Selected City]), 3),
+				    ("Rank", NAMEOF('City Metrics'[Green Space Rank Selected City]), 4),
+				    ("2", NAMEOF('City Metrics'[Green Space Medal Selected City]), 5),
+				    ("Housing Affordability", NAMEOF('City Metrics'[Housing Affordability TY Selected City]), 6),
+				    ("Rank", NAMEOF('City Metrics'[Housing Affordability Rank Selected City]), 7),
+				    ("3", NAMEOF('City Metrics'[Housing Affordability Medal Selected City]), 8),
+				    ("Transit", NAMEOF('City Metrics'[Transit TY Selected City]), 9),
+				    ("Rank", NAMEOF('City Metrics'[Transit Rank Selected City]), 10),
+				    ("4", NAMEOF('City Metrics'[Transit Medal Selected City]), 11),
+				    ("Livability", NAMEOF('City Metrics'[Livability TY Selected City]), 12),
+				    ("Rank", NAMEOF('City Metrics'[Livability Rank Selected City]), 13),
+				    ("5", NAMEOF('City Metrics'[Livability Medal Selected City]), 14)
 				}
 
-	annotation PBI_Id = ace9cf1dd9a44677b0dae700db0d10b3
+	annotation PBI_Id = 10e8c439f0114cb0b48fb48616972856
 

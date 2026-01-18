@@ -10,3 +10,7 @@ relationship AutoDetected_647273df-a5d3-444e-9b89-e4befd7f7cd4
 	fromColumn: Monikers.City
 	toColumn: 'City Lookup'.City
 
+relationship 78d011c6-da0b-e630-f479-89e1cbb03500
+	fromColumn: 'City Metrics'.City
+	toColumn: Cities.City
+

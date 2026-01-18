@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 346,
-            "y": 179.41796875
+            "x": 330,
+            "y": 398.41796875
           },
           "nodeIndex": "City Metrics",
           "nodeLineageTag": "4b92ee6c-8789-4bf0-80e5-621598d99958",
@@ -30,10 +30,11 @@
           "nodeIndex": "City Lookup",
           "nodeLineageTag": "497ea5b1-fbee-4c4a-8ad2-e9ae64a32214",
           "size": {
-            "height": 200,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 3,
+          "expandedHeight": 200
         },
         {
           "location": {
@@ -52,53 +53,71 @@
         {
           "location": {
             "x": 0,
-            "y": 328.11328125
+            "y": 423.11328125
           },
           "nodeIndex": "Monikers",
           "nodeLineageTag": "cd38a76f-ed87-49fd-9bf2-74ca48a2de3e",
           "size": {
-            "height": 152,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 2,
+          "expandedHeight": 152
+        },
+        {
+          "location": {
+            "x": 912.99999618530273,
+            "y": 161.056640625
+          },
+          "nodeIndex": "sm_Metrics & Rank",
+          "nodeLineageTag": "42c8dd37-ec04-4fb7-9fa3-17ef1e3b5b11",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
         },
         {
           "location": {
             "x": 912.99999618530273,
             "y": 0
           },
-          "nodeIndex": "fp_Metrics, Ranks and Medals",
+          "nodeIndex": "fp_Metrics, Ranks & Medals for Per Metric Table",
           "size": {
-            "height": 152,
+            "height": 72,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 152
         },
         {
           "location": {
-            "x": 920.99999618530273,
-            "y": 161.056640625
+            "x": 912.99999618530273,
+            "y": 83.056640625
           },
-          "nodeIndex": "fp_metrics",
+          "nodeIndex": "fp_Metrics, Ranks and Medals",
           "nodeLineageTag": "993e8761-c612-4c6d-9b67-73c157421674",
           "size": {
-            "height": 152,
+            "height": 72,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 152
         },
         {
           "location": {
-            "x": 920.99999618530273,
-            "y": 324.056640625
+            "x": 313,
+            "y": 0
           },
-          "nodeIndex": "small multi",
-          "nodeLineageTag": "42c8dd37-ec04-4fb7-9fa3-17ef1e3b5b11",
+          "nodeIndex": "Cities",
+          "nodeLineageTag": "22fa92d7-ca3a-4705-9b64-a2bab349774c",
           "size": {
-            "height": 200,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 200
         }
       ],
       "name": "All tables",

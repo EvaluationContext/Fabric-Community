@@ -177,7 +177,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "63.64013864355002D"
+                  "Value": "65.52077251426505D"
                 }
               }
             }
@@ -310,7 +310,8 @@
             "Property": "Emissions Winner"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "isHiddenInViewMode": true
       },
       {
         "name": "359a11e37c8280062528",
@@ -325,7 +326,8 @@
             "Property": "Green Space Winner"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "isHiddenInViewMode": true
       },
       {
         "name": "ba7766502a29aad6e61d",
@@ -340,7 +342,8 @@
             "Property": "Housing Affordability Winner"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "isHiddenInViewMode": true
       },
       {
         "name": "8c3c0b3b731518d08c7d",
@@ -355,7 +358,8 @@
             "Property": "Livability Winner"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "isHiddenInViewMode": true
       },
       {
         "name": "fafd9eca6bbb8c97635b",
@@ -370,7 +374,8 @@
             "Property": "Transit Winner"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "isHiddenInViewMode": true
       }
     ],
     "filterSortOrder": "Custom"

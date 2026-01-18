@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "City Lookup"
+                      "Entity": "Cities"
                     }
                   },
                   "Property": "City"
                 }
               },
-              "queryRef": "City Lookup.City",
-              "nativeQueryRef": "City"
+              "queryRef": "Cities.City",
+              "nativeQueryRef": "City1"
             },
             {
               "field": {
@@ -37,10 +37,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Emissions TY"
+                  "Property": "Emissions TY Selected City"
                 }
               },
-              "queryRef": "City Metrics.Emissions TY",
+              "queryRef": "City Metrics.Emissions TY Selected City",
               "nativeQueryRef": "Metric",
               "displayName": "Metric"
             },
@@ -52,10 +52,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Emissions Rank"
+                  "Property": "Emissions Rank Selected City"
                 }
               },
-              "queryRef": "City Metrics.Emissions Rank",
+              "queryRef": "City Metrics.Emissions Rank Selected City",
               "nativeQueryRef": "Rank",
               "displayName": "Rank"
             },
@@ -67,10 +67,10 @@
                       "Entity": "City Metrics"
                     }
                   },
-                  "Property": "Emission Medal"
+                  "Property": "Emission Medal Selected City"
                 }
               },
-              "queryRef": "City Metrics.Emission Medal",
+              "queryRef": "City Metrics.Emission Medal Selected City",
               "nativeQueryRef": "Medal",
               "displayName": "Medal"
             }
@@ -81,7 +81,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fp_Metrics, Ranks and Medals"
+                      "Entity": "fp_Metrics, Ranks & Medals for Per Metric Table"
                     }
                   },
                   "Property": "Metric"
@@ -104,7 +104,7 @@
                     "Entity": "City Metrics"
                   }
                 },
-                "Property": "Emissions TY"
+                "Property": "Emissions TY Selected City"
               }
             },
             "direction": "Descending"
@@ -190,6 +190,25 @@
                   "Value": "4D"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
             }
           }
         }
@@ -219,52 +238,6 @@
         },
         {
           "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "City Metrics"
-                        }
-                      },
-                      "Property": "Is Briarport Value Colour"
-                    }
-                  }
-                }
-              }
-            },
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "City Metrics"
-                        }
-                      },
-                      "Property": "Is Briarport Background Colour"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "City Lookup.City"
-          }
-        },
-        {
-          "properties": {
             "backColor": {
               "solid": {
                 "color": {
@@ -291,7 +264,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -337,7 +310,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -383,7 +356,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -429,7 +402,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -475,7 +448,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -521,7 +494,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -567,7 +540,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -613,7 +586,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -659,7 +632,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -705,7 +678,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -751,7 +724,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -797,7 +770,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -843,7 +816,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -889,7 +862,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -935,7 +908,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -981,7 +954,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -1011,7 +984,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -1073,7 +1046,7 @@
                           "Entity": "City Metrics"
                         }
                       },
-                      "Property": "Is Briarport Value Colour"
+                      "Property": "Briarport and Selected City Font Color"
                     }
                   }
                 }
@@ -1089,6 +1062,742 @@
               }
             ],
             "metadata": "City Metrics.Emissions TY"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Cities.City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Transit TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Transit Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Transit Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Emission Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Emissions Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Emissions TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Green Space TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Green Space Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Green Space Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Housing Affordability Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Housing Affordability Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Housing Affordability TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Livability TY Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Livability Rank Selected City"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Background Color"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "City Metrics"
+                        }
+                      },
+                      "Property": "Briarport and Selected City Font Color"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "City Metrics.Livability Medal Selected City"
           }
         }
       ],
@@ -1133,6 +1842,136 @@
           },
           "selector": {
             "metadata": "City Metrics.Emissions Rank"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Transit Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Emission Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Green Space Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Housing Affordability Medal Selected City"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "City Metrics.Livability Medal Selected City"
           }
         }
       ]
@@ -1208,6 +2047,26 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -1216,18 +2075,123 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "34e224486439054c4e53",
+        "name": "39fceea83401275bd064",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "City Lookup"
+                "Entity": "Cities"
               }
             },
             "Property": "City"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "Cities",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "c"
+                              }
+                            },
+                            "Property": "City"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Selected City'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "isHiddenInViewMode": true,
+        "isLockedInViewMode": true,
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "a8b06820450233e09903",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Emissions TY Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "4b5bbc566087a54b1b6e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Emissions Rank Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "13a307bcd800a08554b5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "City Metrics"
+              }
+            },
+            "Property": "Emission Medal Selected City"
+          }
+        },
+        "type": "Advanced",
+        "isHiddenInViewMode": true
       }
     ]
   }
