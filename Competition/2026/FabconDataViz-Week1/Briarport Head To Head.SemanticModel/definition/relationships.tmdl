@@ -1,0 +1,12 @@
+relationship AutoDetected_0443f1e1-102b-4000-94e3-dc5cafef9318
+	fromColumn: 'City Metrics'.City
+	toColumn: 'City Lookup'.City
+
+relationship 13bff6b4-515e-b7aa-3b0f-bf267d26b2a2
+	fromColumn: 'City Metrics'.Year
+	toColumn: Date.Year
+
+relationship AutoDetected_647273df-a5d3-444e-9b89-e4befd7f7cd4
+	fromColumn: Monikers.City
+	toColumn: 'City Lookup'.City
+

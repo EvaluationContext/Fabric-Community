@@ -1,0 +1,1312 @@
+table 'City Metrics'
+	lineageTag: 4b92ee6c-8789-4bf0-80e5-621598d99958
+
+	measure 'Emissions TY' =
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			CALCULATE(
+			    SUM( 'City Metrics'[EmissionsIndex] ),
+			    'Date'[Year] = yr
+			)
+		displayFolder: Metrics\TY
+		lineageTag: ce9b08d1-cd0e-45e8-b1c9-ce88208b837f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Green Space TY' =
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			CALCULATE(
+			    SUM( 'City Metrics'[GreenSpacePct] ) / 100,
+			    'Date'[Year] = yr
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\TY
+		lineageTag: 8672e66d-396c-417b-9e65-08524b36fe02
+
+	measure 'Transit TY' =
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			CALCULATE(
+			    SUM( 'City Metrics'[TransitScore] ),
+			    'Date'[Year] = yr
+			)
+		displayFolder: Metrics\TY
+		lineageTag: 5cb323f9-6965-4591-936b-e1be4e8ed917
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Housing Affordability TY' =
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			CALCULATE(
+			    SUM( 'City Metrics'[HousingAffordabilityIndex] ),
+			    'Date'[Year] = yr
+			)
+		displayFolder: Metrics\TY
+		lineageTag: d50ff8d8-b3ba-449b-b326-5fb603f914d6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Livability TY' =
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			CALCULATE(
+			    SUM( 'City Metrics'[LivabilityComposite] ),
+			    'Date'[Year] = yr
+			)
+		displayFolder: Metrics\TY
+		lineageTag: 23209b16-a794-4634-a90f-47844c90c4c8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'City Image' =
+			
+			var city = SUBSTITUTE( SELECTEDVALUE( 'City Lookup'[City] ), " ", "" )
+			RETURN
+			"https://raw.githubusercontent.com/EvaluationContext/Fabric-Community/refs/heads/main/Competition/2026/FabconDataViz-Week1/Images/Hero/" & city & ".png"
+		displayFolder: Image
+		lineageTag: 9117d7b3-eb1e-4afc-a37c-1ba53ca0f0cb
+		dataCategory: ImageUrl
+
+	measure 'Metric Icon' = ```
+			
+			var Color = "#000000"
+			var Metric = MAX( 'fp_Metrics, Ranks and Medals'[Metric Name] )
+			RETURN
+			SWITCH(
+			    true,
+			        Metric = "Green Space", 
+			            "data:image/svg+xml;utf8," &
+			            "<svg xmlns=""http://www.w3.org/2000/svg"" height=""24px"" viewBox=""0 -960 960 960"" width=""24px"" fill=""" & Color & """>" &
+			            "<path d='M200-80v-80h240v-160h-80q-83 0-141.5-58.5T160-520q0-60 33-110.5t89-73.5q9-75 65.5-125.5T480-880q76 0 132.5 50.5T678-704q56 23 89 73.5T800-520q0 83-58.5 141.5T600-320h-80v160h240v80H200Zm160-320h240q50 0 85-35t35-85q0-36-20.5-66T646-630l-42-18-6-46q-6-45-39.5-75.5T480-800q-45 0-78.5 30.5T362-694l-6 46-42 18q-33 14-53.5 44T240-520q0 50 35 85t85 35Zm120-200Z'/></svg>",
+			        Metric = "Emissions", 
+			            "data:image/svg+xml;utf8," &
+			            "<svg xmlns=""http://www.w3.org/2000/svg"" height=""24px"" viewBox=""0 -960 960 960"" width=""24px"" fill=""" & Color & """>" &
+			            "<path d=""M240-350q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T290-400q0 20-14.5 35T240-350Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T290-720q0 20-14.5 35T240-670Zm120 480q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T410-240q0 20-14.5 35T360-190Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T410-560q0 20-14.5 35T360-510Zm120 160q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T530-400q0 20-14.5 35T480-350Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T530-720q0 20-14.5 35T480-670Zm120 480q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T650-240q0 20-14.5 35T600-190Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T650-560q0 20-14.5 35T600-510Zm120 160q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T770-400q0 20-14.5 35T720-350Zm0-320q-20 0-35-15t-15-35q0-21 15-35.5t35-14.5q21 0 35.5 14.5T770-720q0 20-14.5 35T720-670Z""/></svg>",
+			        Metric = "Housing Affordability",
+			            "data:image/svg+xml;utf8," &
+			            "<svg xmlns=""http://www.w3.org/2000/svg"" height=""24px"" viewBox=""0 -960 960 960"" width=""24px"" fill=""" & Color & """>" &
+			            "<path d='M720-120q-83 0-141.5-58.5T520-320q0-83 58.5-141.5T720-520q83 0 141.5 58.5T920-320q0 83-58.5 141.5T720-120Zm-560-80v-480l320-240 320 240v92q-19-6-39-9t-41-3v-40L480-820 240-640v360h203q3 21 9 41t15 39H160Zm320-350Z'/><text x='720' y='-320' font-family='Arial, sans-serif' font-size='350' font-weight='bold' text-anchor='middle' dominant-baseline='central' fill='#ffffff'>$</text></svg>",
+			        Metric = "Transit", 
+			            "data:image/svg+xml;utf8," &
+			            "<svg xmlns=""http://www.w3.org/2000/svg"" height=""24px"" viewBox=""0 -960 960 960"" width=""24px"" fill=""" & Color & """>" &
+			            "<path d='M340-440q-25 0-42.5 17.5T280-380q0 25 17.5 42.5T340-320q25 0 42.5-17.5T400-380q0-25-17.5-42.5T340-440Zm360-120q80 0 130 44.5T880-400v160q0 33-23.5 56.5T800-160l80 80H520l80-80q-33 0-56.5-23.5T520-240v-160q0-71 50-115.5T700-560Zm0 260q-12 0-21 9t-9 21q0 12 9 21t21 9q12 0 21-9t9-21q0-12-9-21t-21-9ZM588-440q-4 9-6 19t-2 21v40h240v-40q0-11-2-21t-6-19H588ZM480-880q172 0 246 37t74 123v96q-18-6-38-9.5t-42-5.5v-41H240v120h260q-16 17-27.5 37T453-480H240v120q0 33 23.5 56.5T320-280h120v80H320v40q0 17-11.5 28.5T280-120h-40q-17 0-28.5-11.5T200-160v-82q-18-20-29-44.5T160-340v-380q0-83 77-121.5T480-880Zm2 120h224-448 224Zm-224 0h448q-15-17-64.5-28.5T482-800q-107 0-156.5 12.5T258-760Zm195 280Z'/></svg>",
+			        Metric = "Livability", 
+			            "data:image/svg+xml;utf8," &
+			            "<svg xmlns=""http://www.w3.org/2000/svg"" height=""24px"" viewBox=""0 -960 960 960"" width=""24px"" fill=""" & Color & """>" &
+			            "<path d='M480-240Zm-320 80v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440h14q-11 18-16.5 38.5T472-360q-54 1-107.5 14.5T260-306q-9 5-14.5 14t-5.5 20v32h283l80 80H160Zm320-320q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm236 480L576-300q-13-13-18.5-28t-5.5-30q0-32 23-57t59-25q28 0 44 13t38 35q20-20 36.5-34t45.5-14q37 0 59.5 25.5T880-357q0 15-6 30t-18 27L716-160Z'/></svg>"
+			)
+			```
+		displayFolder: Image
+		lineageTag: f869350c-0809-475f-873d-87f791d5bac6
+		dataCategory: ImageUrl
+
+	measure 'Green Space Rank' =
+			
+			RANK(
+			    ALL( 'City Lookup'[City] ),
+			    ORDERBY( [Green Space TY], DESC ),
+			)
+		displayFolder: Metrics\Rank
+		lineageTag: 1bd747f2-16e0-4ffd-8037-86d5cd91ccf8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Housing Affordability Rank' =
+			
+			RANK(
+			    ALL( 'City Lookup'[City] ),
+			    ORDERBY( [Housing Affordability TY], ASC )
+			)
+		displayFolder: Metrics\Rank
+		lineageTag: 28e59850-598e-490e-b23c-bee6c7343e72
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Transit Rank' =
+			
+			RANK(
+			    ALL( 'City Lookup'[City] ),
+			    ORDERBY( [Transit TY], DESC )
+			)
+		displayFolder: Metrics\Rank
+		lineageTag: 26a71bab-22bc-4240-a329-43b1cd0e8f0d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Emissions Rank' =
+			
+			RANK(
+			    ALL( 'City Lookup'[City] ),
+			    ORDERBY( [Emissions TY], ASC )
+			)
+		displayFolder: Metrics\Rank
+		lineageTag: 4e43c6b9-18a2-426a-a049-7296ee6896eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Livability Rank' =
+			
+			RANK(
+			    ALL( 'City Lookup'[City] ),
+			    ORDERBY( [Livability TY], DESC )
+			)
+		displayFolder: Metrics\Rank
+		lineageTag: 15ad9898-be75-4342-ae32-63cad40ac769
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Emission Medal' = ```
+			
+			var rnk = [Emissions Rank]
+			var color = 
+			    SWITCH(
+			        rnk,
+			        1, "#EFBF04",
+			        2, "#c0c0c0",
+			        3, "#CE8946"
+			    )
+			return
+			IF( 
+			    rnk <= 3,
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill=""" & Color & """><path d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'/>
+			    </svg>"
+			)
+			```
+		displayFolder: Metrics\Medal
+		lineageTag: b2f4661c-a7e3-4431-9127-45b13928d533
+		dataCategory: ImageUrl
+
+	measure 'Green Space Medal' = ```
+			
+			var rnk = [Green Space Rank]
+			var color = 
+			    SWITCH(
+			        rnk,
+			        1, "#EFBF04",
+			        2, "#c0c0c0",
+			        3, "#CE8946"
+			    )
+			return
+			IF( 
+			    rnk <= 3,
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill=""" & Color & """><path d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'/>
+			    </svg>"
+			)
+			```
+		displayFolder: Metrics\Medal
+		lineageTag: de741b30-b263-4158-85af-6cc457929935
+		dataCategory: ImageUrl
+
+	measure 'Housing Affordability Medal' = ```
+			
+			var rnk = [Housing Affordability Rank]
+			var color = 
+			    SWITCH(
+			        rnk,
+			        1, "#EFBF04",
+			        2, "#c0c0c0",
+			        3, "#CE8946"
+			    )
+			return
+			IF( 
+			    rnk <= 3,
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill=""" & Color & """><path d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'/>
+			    </svg>"
+			)
+			```
+		displayFolder: Metrics\Medal
+		lineageTag: c20ed956-cae7-4332-b6ec-88dcfbe06bd2
+		dataCategory: ImageUrl
+
+	measure 'Transit Medal' = ```
+			
+			var rnk = [Transit Rank]
+			var color = 
+			    SWITCH(
+			        rnk,
+			        1, "#EFBF04",
+			        2, "#c0c0c0",
+			        3, "#CE8946"
+			    )
+			return
+			IF( 
+			    rnk <= 3,
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill=""" & Color & """><path d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'/>
+			    </svg>"
+			)
+			```
+		displayFolder: Metrics\Medal
+		lineageTag: cbe54605-dc83-47b6-95c6-ab51f290ccf9
+		dataCategory: ImageUrl
+
+	measure 'Livability Medal' = ```
+			
+			var rnk = [Livability Rank]
+			var color = 
+			    SWITCH(
+			        rnk,
+			        1, "#EFBF04",
+			        2, "#c0c0c0",
+			        3, "#CE8946"
+			    )
+			return
+			IF( 
+			    rnk <= 3,
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill=""" & Color & """><path d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'/>
+			    </svg>"
+			)
+			```
+		displayFolder: Metrics\Medal
+		lineageTag: ace8e19a-67ee-474d-b263-aa7122f147ea
+		dataCategory: ImageUrl
+
+	measure 'Is Briarport Background Colour' =
+			
+			IF( [Selected City] = "Briarport", "#1D4777" )
+		lineageTag: ed0a2d69-bca1-4bce-a23b-cb5ecbd1e92c
+
+	measure 'Is Briarport Value Colour' =
+			
+			IF( [Selected City] = "Briarport", "#FFFFFF" )
+		lineageTag: 5196cc5c-35cd-4f48-a3c0-6b9e6020a9d4
+
+	measure 'Emissions LY' = ```
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			    CALCULATE(
+			        SUM( 'City Metrics'[EmissionsIndex] ),
+			        'Date'[Year] = yr - 1
+			    ) 
+			```
+		displayFolder: Metrics\LY
+		lineageTag: 54cf2ab9-0306-44c9-9550-4d148f346298
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Green Space LY' = ```
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			    CALCULATE(
+			        SUM( 'City Metrics'[GreenSpacePct] ) / 100,
+			        'Date'[Year] = yr - 1
+			    ) 
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\LY
+		lineageTag: 8f432955-e61e-4d0e-91cc-db5815ba2c02
+
+	measure 'Housing Affordability LY' = ```
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			    CALCULATE(
+			        SUM( 'City Metrics'[HousingAffordabilityIndex] ),
+			        'Date'[Year] = yr - 1
+			    ) 
+			```
+		displayFolder: Metrics\LY
+		lineageTag: 4c9e0664-a225-4af7-b6e8-0975ed795f80
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Livability LY' = ```
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			    CALCULATE(
+			        SUM( 'City Metrics'[LivabilityComposite] ),
+			        'Date'[Year] = yr - 1
+			    ) 
+			```
+		displayFolder: Metrics\LY
+		lineageTag: f71ed422-460f-41dc-b58d-e8cfeffc2edd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Transit LY' = ```
+			
+			VAR yr = MAX( 'Date'[Year] )
+			RETURN
+			    CALCULATE(
+			        SUM( 'City Metrics'[TransitScore] ),
+			        'Date'[Year] = yr - 1
+			    ) 
+			```
+		displayFolder: Metrics\LY
+		lineageTag: 6a0af115-6bb2-44eb-b182-4c982d3adae5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Livability TY vs LY' =
+			
+			[Livability TY] - [Livability LY]
+		displayFolder: Metrics\TY vs LY\Abs
+		lineageTag: d967baea-bd4f-47b5-937a-792d214c1145
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Housing Affordability TY vs LY' =
+			
+			[Housing Affordability TY] - [Housing Affordability LY]
+		displayFolder: Metrics\TY vs LY\Abs
+		lineageTag: 05f19f62-b272-4b93-98fb-038a3862f01c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Emissions TY vs LY' =
+			
+			[Emissions TY] - [Emissions LY]
+		displayFolder: Metrics\TY vs LY\Abs
+		lineageTag: fa3be37a-3597-43ff-9fe1-14f1581995b0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Green Space TY vs LY' =
+			
+			ROUND( [Green Space TY] - [Green Space LY], 3)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\TY vs LY\Abs
+		lineageTag: d9572fb1-6035-475f-99f2-7e03c745639b
+
+	measure 'Transit TY vs LY' =
+			
+			[Transit TY] - [Transit LY]
+		displayFolder: Metrics\TY vs LY\Abs
+		lineageTag: af4e5b59-261e-4731-ae59-860b42be1822
+
+	measure 'Emissions TY vs LY %' =
+			
+			DIVIDE([Emissions TY vs LY], [Emissions LY])
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\TY vs LY\%
+		lineageTag: 03ce8d16-3504-4cd0-a546-c34df620b79c
+
+	measure 'Livability TY vs LY %' =
+			
+			DIVIDE([Livability TY vs LY], [Livability LY])
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\TY vs LY\%
+		lineageTag: e5ea4b66-26db-4868-82ea-bb023d371ac5
+
+	measure 'Green Space TY vs LY %' =
+			
+			DIVIDE([Green Space TY vs LY], [Green Space LY])
+		displayFolder: Metrics\TY vs LY\%
+		lineageTag: f935370a-3a49-4020-b1b4-7319d2c67aec
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Transit TY vs LY %' =
+			
+			DIVIDE([Transit TY vs LY], [Transit LY])
+		displayFolder: Metrics\TY vs LY\%
+		lineageTag: 4f0c5013-df63-423e-a38c-81dedd156589
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Housing Affordability TY vs LY %' =
+			
+			DIVIDE([Housing Affordability TY vs LY], [Housing Affordability LY])
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\TY vs LY\%
+		lineageTag: 1048cc54-6ba3-4ac3-899c-f9f66adb7cdf
+
+	measure 'Emissions TY vs LY Direction' =
+			
+			VAR up = "▲"
+			VAR down = "▼"
+			RETURN
+			if( [Emissions TY vs LY] < 0, down, up )
+		displayFolder: Metrics\TY vs LY\Direction
+		lineageTag: 7b934b29-ca26-42bb-8873-99ca4df802a0
+
+	measure 'Livability TY vs LY Direction' =
+			
+			VAR up = "▲"
+			VAR down = "▼"
+			RETURN
+			if( [Livability TY vs LY] < 0, down, up )
+		displayFolder: Metrics\TY vs LY\Direction
+		lineageTag: a08113a8-37af-49c0-b3ba-357761367d65
+
+	measure 'Transit TY vs LY Direction' =
+			
+			VAR up = "▲"
+			VAR down = "▼"
+			RETURN
+			if( [Transit TY vs LY] < 0, down, up )
+		displayFolder: Metrics\TY vs LY\Direction
+		lineageTag: 607e436c-0c12-4226-8c70-f35c3abfc620
+
+	measure 'Housing Affordability TY vs LY Direction' =
+			
+			VAR up = "▲"
+			VAR down = "▼"
+			RETURN
+			if( [Housing Affordability TY vs LY] < 0, down, up )
+		displayFolder: Metrics\TY vs LY\Direction
+		lineageTag: 19e81b7f-6699-4616-8b9f-2ab3d6808cf6
+
+	measure 'Green Space TY vs LY Direction' =
+			
+			VAR up = "▲"
+			VAR down = "▼"
+			RETURN
+			if( [Green Space TY vs LY] < 0, down, up )
+		displayFolder: Metrics\TY vs LY\Direction
+		lineageTag: d525c822-af03-44e0-8ac9-0758baa1732d
+
+	measure 'Emissions TY vs LY Color' = ```
+			
+			var green = "#228B22"
+			var red = "#C44536"
+			var grey = "#808080"
+			var metric = [Emissions TY vs LY]
+			RETURN
+			SWITCH(
+			    true,
+			    metric = 0, grey, 
+			    metric > 0, red,
+			    green
+			)
+			```
+		displayFolder: Metrics\TY vs LY\Color
+		lineageTag: f26e6c7c-2efe-4270-9644-2482fd2a7ae2
+
+	measure 'Livability TY vs LY Color' = ```
+			
+			var green = "#228B22"
+			var red = "#C44536"
+			var grey = "#808080"
+			var metric = [Livability TY vs LY]
+			RETURN
+			SWITCH(
+			    true,
+			    metric = 0, grey, 
+			    metric > 0, green,
+			    red
+			)
+			```
+		displayFolder: Metrics\TY vs LY\Color
+		lineageTag: 37a8ea90-bfa3-4b76-9fd7-46e4d46e3122
+
+	measure 'Green Space TY vs LY Color' = ```
+			
+			var green = "#228B22"
+			var red = "#C44536"
+			var grey = "#808080"
+			var metric = [Green Space TY vs LY]
+			RETURN
+			SWITCH(
+			    true,
+			    metric = 0, grey, 
+			    metric > 0, green,
+			    red
+			)
+			```
+		displayFolder: Metrics\TY vs LY\Color
+		lineageTag: 1230d87e-46f3-4fe7-b8a1-536fb3236803
+
+	measure 'Housing Affordability TY vs LY Color' = ```
+			
+			var green = "#228B22"
+			var red = "#C44536"
+			var grey = "#808080"
+			var metric = [Housing Affordability TY vs LY]
+			RETURN
+			SWITCH(
+			    true,
+			    metric = 0, grey, 
+			    metric > 0, red,
+			    green
+			)
+			```
+		displayFolder: Metrics\TY vs LY\Color
+		lineageTag: 8b4de4e6-dab9-4f9f-bc13-f56615e6730b
+
+	measure 'Transit TY vs LY Color' = ```
+			
+			var green = "#228B22"
+			var red = "#C44536"
+			var grey = "#808080"
+			var metric = [Transit TY vs LY]
+			RETURN
+			SWITCH(
+			    true,
+			    metric = 0, grey, 
+			    metric > 0, green,
+			    red
+			)
+			```
+		displayFolder: Metrics\TY vs LY\Color
+		lineageTag: 55d058eb-ec86-4fb4-8727-05137536c3ed
+
+	measure 'Emissions TY vs LY widget' =
+			
+			ROUND( [Emissions TY vs LY], 3 ) & " | " & FORMAT( [Emissions TY vs LY %], "0.##%" ) & " " & [Emissions TY vs LY Direction]
+		displayFolder: Metrics\TY vs LY\Widget
+		lineageTag: b688bf35-82e0-4e00-af7a-a63556930d46
+
+	measure 'Green Space TY vs LY widget' =
+			
+			FORMAT( [Green Space TY vs LY], "0.##%" ) & " | " & FORMAT( [Green Space TY vs LY %], "0.##%" ) & " " & [Green Space TY vs LY Direction]
+		displayFolder: Metrics\TY vs LY\Widget
+		lineageTag: 595eda05-1da1-48a6-b382-9cd1671ce15f
+
+	measure 'Housing Affordability TY vs LY widget' =
+			
+			ROUND( [Housing Affordability TY vs LY], 3 ) & " | " & FORMAT( [Housing Affordability TY vs LY %], "0.##%" ) & " " & [Housing Affordability TY vs LY Direction]
+		displayFolder: Metrics\TY vs LY\Widget
+		lineageTag: e3ec2b1e-5fdb-48fa-b37e-0ddb61f769f6
+
+	measure 'Livability TY vs LY widget' =
+			
+			ROUND( [Livability TY vs LY], 3 ) & "  | " & FORMAT( [Livability TY vs LY %], "0.##%" ) & " " & [Livability TY vs LY Direction]
+		displayFolder: Metrics\TY vs LY\Widget
+		lineageTag: e0e0b118-4800-41ab-afca-0b1c95652320
+
+	measure 'Transit TY vs LY widget' =
+			
+			ROUND( [Transit TY vs LY], 3 ) & "  | " & FORMAT( [Transit TY vs LY %], "0.##%" ) & " " & [Transit TY vs LY Direction]
+		displayFolder: Metrics\TY vs LY\Widget
+		lineageTag: ec171d6b-d114-4f9d-a85d-4a0a761bdbc3
+
+	measure 'Emissions vs Selected City' = ```
+			
+			[Emissions TY] - 
+			CALCULATE(
+			    [Emissions TY],
+			    TREATAS( { "Briarport" }, 'City Lookup'[City] )
+			)
+			```
+		displayFolder: Metrics\vs
+		lineageTag: 8809a2ad-36b5-4fb7-8edc-440a97f3d395
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Green Space vs Selected City' = ```
+			
+			[Green Space TY] - 
+			CALCULATE(
+			    [Green Space TY],
+			    TREATAS( { "Briarport" }, 'City Lookup'[City] )
+			)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\vs
+		lineageTag: 4cd53901-1591-494b-8c27-2930bfce5dc8
+
+	measure 'Housing Affordability vs Selected City' = ```
+			
+			[Housing Affordability TY] - 
+			CALCULATE(
+			    [Housing Affordability TY],
+			    TREATAS( { "Briarport" }, 'City Lookup'[City] )
+			)
+			```
+		displayFolder: Metrics\vs
+		lineageTag: 95000d39-d8a1-4496-b317-b92d84ca9a69
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Transit vs Selected City' = ```
+			
+			[Transit TY] - 
+			CALCULATE(
+			    [Transit TY],
+			    TREATAS( { "Briarport" }, 'City Lookup'[City] )
+			)
+			```
+		displayFolder: Metrics\vs
+		lineageTag: 22cfced5-85a6-42cb-bca4-2dc7cda9bb27
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Livability vs Selected City' = ```
+			
+			[Livability TY] - 
+			CALCULATE(
+			    [Livability TY],
+			    TREATAS( { "Briarport" }, 'City Lookup'[City] )
+			)
+			```
+		displayFolder: Metrics\vs
+		lineageTag: cf878f0b-1821-46d8-8ba4-8f046c47b36a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Emissions Winner' = ```
+			
+			VAR _BriarportColor = [Briarport]
+			VAR _SelectedColor = [Selected City Color]
+			VAR _Metric = [Emissions vs Selected City]
+			-- Adjustable horizontal offset (0 is center, higher numbers move it further out)
+			VAR _Gap = 500 
+			
+			-- Trophy Path
+			VAR _TrophyPath =  "d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'"
+			
+			-- The ViewBox is set wide (-600 to 1500) to ensure the trophy is visible when translated
+			VAR _TrophyLeft = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _BriarportColor & "'>
+			        <path transform='translate(-" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			VAR _TrophyRight = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _SelectedColor & "'>
+			        <path transform='translate(" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    _Metric > 0, _TrophyLeft, 
+			    _Metric < 0, _TrophyRight,
+			    BLANK()
+			)
+			```
+		displayFolder: Metrics\vs
+		lineageTag: 5b7c8dda-04d2-43c5-b157-b0a324d57525
+		dataCategory: ImageUrl
+
+	measure 'Green Space Winner' = ```
+			
+			VAR _BriarportColor = [Briarport]
+			VAR _SelectedColor = [Selected City Color]
+			VAR _Metric = [Green Space vs Selected City]
+			-- Adjustable horizontal offset (0 is center, higher numbers move it further out)
+			VAR _Gap = 500 
+			
+			-- Trophy Path
+			VAR _TrophyPath =  "d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'"
+			
+			-- The ViewBox is set wide (-600 to 1500) to ensure the trophy is visible when translated
+			VAR _TrophyLeft = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _BriarportColor & "'>
+			        <path transform='translate(-" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			VAR _TrophyRight = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _SelectedColor & "'>
+			        <path transform='translate(" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    _Metric < 0, _TrophyLeft, 
+			    _Metric > 0, _TrophyRight,
+			    BLANK()
+			)
+			```
+		displayFolder: Metrics\vs
+		lineageTag: 57b7fbf0-ddb8-4d84-a328-b0fa4c02937b
+		dataCategory: ImageUrl
+
+	measure 'Housing Affordability Winner' = ```
+			
+			VAR _BriarportColor = [Briarport]
+			VAR _SelectedColor = [Selected City Color]
+			VAR _Metric = [Housing Affordability vs Selected City]
+			-- Adjustable horizontal offset (0 is center, higher numbers move it further out)
+			VAR _Gap = 500 
+			
+			-- Trophy Path
+			VAR _TrophyPath =  "d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'"
+			
+			-- The ViewBox is set wide (-600 to 1500) to ensure the trophy is visible when translated
+			VAR _TrophyLeft = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _BriarportColor & "'>
+			        <path transform='translate(-" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			VAR _TrophyRight = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _SelectedColor & "'>
+			        <path transform='translate(" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    _Metric > 0, _TrophyLeft, 
+			    _Metric < 0, _TrophyRight,
+			    BLANK()
+			)
+			```
+		displayFolder: Metrics\vs
+		lineageTag: 52614390-d982-4104-bbab-62581873c2d9
+		dataCategory: ImageUrl
+
+	measure 'Livability Winner' = ```
+			
+			VAR _BriarportColor = [Briarport]
+			VAR _SelectedColor = [Selected City Color]
+			VAR _Metric = [Livability vs Selected City]
+			
+			-- Adjustable horizontal offset (0 is center, higher numbers move it further out)
+			VAR _Gap = 500 
+			
+			-- Trophy Path
+			VAR _TrophyPath =  "d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'"
+			
+			-- The ViewBox is set wide (-600 to 1500) to ensure the trophy is visible when translated
+			VAR _TrophyLeft = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _BriarportColor & "'>
+			        <path transform='translate(-" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			VAR _TrophyRight = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _SelectedColor & "'>
+			        <path transform='translate(" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    _Metric < 0, _TrophyLeft, 
+			    _Metric > 0, _TrophyRight,
+			    BLANK()
+			)
+			```
+		displayFolder: Metrics\vs
+		lineageTag: f9d0f7b8-cab5-47d2-ad04-45eb387044db
+		dataCategory: ImageUrl
+
+	measure 'Transit Winner' = ```
+			
+			VAR _BriarportColor = [Briarport]
+			VAR _SelectedColor = [Selected City Color]
+			VAR _Metric = [Transit vs Selected City]
+			
+			-- Adjustable horizontal offset (0 is center, higher numbers move it further out)
+			VAR _Gap = 500 
+			
+			-- Trophy Path
+			VAR _TrophyPath =  "d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'"
+			
+			-- The ViewBox is set wide (-600 to 1500) to ensure the trophy is visible when translated
+			VAR _TrophyLeft = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _BriarportColor & "'>
+			        <path transform='translate(-" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			VAR _TrophyRight = 
+			    "data:image/svg+xml;utf8,
+			    <svg xmlns='http://www.w3.org/2000/svg' viewBox='-600 -1000 2000 1000' fill='" & _SelectedColor & "'>
+			        <path transform='translate(" & _Gap & ", 0)' " & _TrophyPath & " />
+			    </svg>"
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    _Metric < 0, _TrophyLeft, 
+			    _Metric > 0, _TrophyRight,
+			    BLANK()
+			)
+			```
+		displayFolder: Metrics\vs
+		lineageTag: 15624f59-1ec2-4e81-aea1-0851de06534e
+		dataCategory: ImageUrl
+
+	measure 'Briarport Medal' = ```
+			
+			var emisssions= IF( [Emissions vs Selected City] > 0, 1 )
+			var green= IF( [Green Space vs Selected City] < 0, 1 )
+			var house= IF( [Housing Affordability vs Selected City] > 0, 1 )
+			var transit= IF( [Transit vs Selected City] < 0, 1 )
+			var livibility= IF( [Livability vs Selected City] < 0, 1 )
+			var color = IF( ( emisssions + green + house + transit + livibility ) >= 3, "#EFBF04", "#EFBF0400" ) 
+			var trophy = 
+			    "data:image/svg+xml;utf8,
+			        <svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill=""" & Color & """><path d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'/>
+			    </svg>"
+			return 
+			trophy
+			```
+		displayFolder: Metrics\vs
+		lineageTag: fcf2ff02-a2ac-49f2-99b8-1a9769fcb67d
+		dataCategory: ImageUrl
+
+	measure 'Selected City Medal' = ```
+			
+			var emisssions= IF( [Emissions vs Selected City] < 0, 1 )
+			var green= IF( [Green Space vs Selected City] > 0, 1 )
+			var house= IF( [Housing Affordability vs Selected City] < 0, 1 )
+			var transit= IF( [Transit vs Selected City] > 0, 1 )
+			var livibility= IF( [Livability vs Selected City] > 0, 1 )
+			var color = IF( ( emisssions + green + house + transit + livibility ) >= 3, "#EFBF04", "#EFBF0400" ) 
+			var trophy = 
+			    "data:image/svg+xml;utf8,
+			        <svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill=""" & Color & """><path d='M280-120v-80h160v-124q-49-11-87.5-41.5T296-442q-75-9-125.5-65.5T120-640v-40q0-33 23.5-56.5T200-760h80v-80h400v80h80q33 0 56.5 23.5T840-680v40q0 76-50.5 132.5T664-442q-18 46-56.5 76.5T520-324v124h160v80H280Zm0-408v-152h-80v40q0 38 22 68.5t58 43.5Zm200 128q50 0 85-35t35-85v-240H360v240q0 50 35 85t85 35Zm200-128q36-13 58-43.5t22-68.5v-40h-80v152Zm-200-52Z'/>
+			    </svg>"
+			return 
+			trophy
+			```
+		displayFolder: Metrics\vs
+		lineageTag: 57aeff1a-1945-4c04-94e1-19c271abc0a0
+		dataCategory: ImageUrl
+
+	measure 'Emissions Line SVG' = ```
+			
+			    DaxLib.SVG.SVG(
+			        100,
+			        20,
+			        BLANK(),
+			        DaxLib.SVG.Compound.Line(
+			            0,              // x
+			            0,              // y
+			            100,            // width
+			            20,            // height
+			            0.05,           // paddingX
+			            0.02,           // paddingY
+			            'Date'[Year],    // xAxis
+			            'City Lookup'[City],
+			            [Emissions TY],   // measureVal
+			            DaxLib.SVG.Color.Theme(
+			                "Power BI",
+			                25
+			            )
+			        ),
+			        BLANK()
+			    )
+			```
+		displayFolder: Metrics\TY\SVG
+		lineageTag: 01faf7a7-18a7-44ba-96f6-a3a052c435c6
+		dataCategory: ImageUrl
+
+	measure 'Green Space Line SVG' = ```
+			
+			    DaxLib.SVG.SVG(
+			        100,
+			        20,
+			        BLANK(),
+			        DaxLib.SVG.Compound.Line(
+			            0,              // x
+			            0,              // y
+			            100,            // width
+			            20,            // height
+			            0.05,           // paddingX
+			            0.02,           // paddingY
+			            'Date'[Year],    // xAxis
+			            'City Lookup'[City],
+			            [Green Space TY],   // measureVal
+			            DaxLib.SVG.Color.Theme(
+			                "Power BI",
+			                25
+			            )
+			        ),
+			        BLANK()
+			    )
+			```
+		displayFolder: Metrics\TY\SVG
+		lineageTag: 050b2732-c8f4-4222-ae30-f32b001e392e
+		dataCategory: ImageUrl
+
+	measure 'Housing Affordability Line SVG' = ```
+			
+			    DaxLib.SVG.SVG(
+			        100,
+			        20,
+			        BLANK(),
+			        DaxLib.SVG.Compound.Line(
+			            0,              // x
+			            0,              // y
+			            100,            // width
+			            20,            // height
+			            0.05,           // paddingX
+			            0.02,           // paddingY
+			            'Date'[Year],    // xAxis
+			            'City Lookup'[City],
+			            [Housing Affordability TY],   // measureVal
+			            DaxLib.SVG.Color.Theme(
+			                "Power BI",
+			                25
+			            )
+			        ),
+			        BLANK()
+			    )
+			```
+		displayFolder: Metrics\TY\SVG
+		lineageTag: d9e4aa0c-dc7d-4849-8134-934bb87a6e2a
+		dataCategory: ImageUrl
+
+	measure 'Transit Line SVG' = ```
+			
+			    DaxLib.SVG.SVG(
+			        100,
+			        20,
+			        BLANK(),
+			        DaxLib.SVG.Compound.Line(
+			            0,              // x
+			            0,              // y
+			            100,            // width
+			            20,            // height
+			            0.05,           // paddingX
+			            0.02,           // paddingY
+			            'Date'[Year],    // xAxis
+			            'City Lookup'[City],
+			            [Transit TY],   // measureVal
+			            DaxLib.SVG.Color.Theme(
+			                "Power BI",
+			                25
+			            )
+			        ),
+			        BLANK()
+			    )
+			```
+		displayFolder: Metrics\TY\SVG
+		lineageTag: 9aadaa80-5e99-4e4f-892a-490ae3a23c47
+		dataCategory: ImageUrl
+
+	measure 'Livability SVG' = ```
+			
+			    DaxLib.SVG.SVG(
+			        100,
+			        20,
+			        BLANK(),
+			        DaxLib.SVG.Compound.Line(
+			            0,              // x
+			            0,              // y
+			            100,            // width
+			            20,            // height
+			            0.05,           // paddingX
+			            0.02,           // paddingY
+			            'Date'[Year],    // xAxis
+			            'City Lookup'[City],
+			            [Livability TY],   // measureVal
+			            DaxLib.SVG.Color.Theme(
+			                "Power BI",
+			                25
+			            )
+			        ),
+			        BLANK()
+			    )
+			```
+		displayFolder: Metrics\TY\SVG
+		lineageTag: a0cdc77e-42f6-4b88-b1e5-8bddfe7261b7
+		dataCategory: ImageUrl
+
+	measure 'Avg Emission TY' = ```
+			
+			    AVERAGEX(
+			        ALL( 'City Lookup'[City] ),
+			        [Emissions TY]
+			    )
+			```
+		displayFolder: Metrics\TY
+		lineageTag: bef21de8-f0cc-4fd0-aa1a-89b6836cc50d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Green Space TY' = ```
+			
+			    AVERAGEX(
+			        ALL( 'City Lookup'[City] ),
+			        [Green Space TY]
+			    )
+			```
+		displayFolder: Metrics\TY
+		lineageTag: 3bb551a0-e0b6-402a-8adc-2111b5672775
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Housing Affordability TY' = ```
+			
+			    AVERAGEX(
+			        ALL( 'City Lookup'[City] ),
+			        [Housing Affordability TY]
+			    )
+			```
+		displayFolder: Metrics\TY
+		lineageTag: a80259fc-1d90-45ce-b0ad-ad9ad4e905d1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Transit TY' = ```
+			
+			    AVERAGEX(
+			        ALL( 'City Lookup'[City] ),
+			        [Transit TY]
+			    )
+			```
+		displayFolder: Metrics\TY
+		lineageTag: a7ca5803-b4ce-46da-9455-14d98c97f945
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Livability TY' = ```
+			
+			    AVERAGEX(
+			        ALL( 'City Lookup'[City] ),
+			        [Livability TY]
+			    )
+			```
+		displayFolder: Metrics\TY
+		lineageTag: 7acf50b4-3b0a-4c82-b502-459dfd1e3d85
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Close =
+			
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='#000000'><path d='m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z'/></svg>"
+		displayFolder: Image
+		lineageTag: 0829aeb2-d25d-4e3d-a170-4161adb9f3c9
+		dataCategory: ImageUrl
+
+	measure Ws = "WWWWWWWWWWWWWWWWWWWWWWWW"
+		displayFolder: tooltip
+		lineageTag: 31204008-519c-4a12-8c6d-184f517ad337
+
+	measure Hidden = "#FFFFFF00"
+		displayFolder: tooltip
+		lineageTag: 0008ff88-e307-41ed-82df-5db46ca391f2
+
+	measure Ashgrove = "#366E40"
+		displayFolder: Colors
+		lineageTag: 7c621ff2-af1c-4ea7-803d-20a61af06923
+
+	measure Cloudbreak = "#4E366E"
+		displayFolder: Colors
+		lineageTag: 8985a672-3454-4369-9d75-b3ceaa4df09a
+
+	measure Crestwater = "#055964"
+		displayFolder: Colors
+		lineageTag: b8e7583f-7e24-414e-858d-da0257955582
+
+	measure Eastwick = "#A44229"
+		displayFolder: Colors
+		lineageTag: 472264d0-f602-440b-bcdc-7a141ee26709
+
+	measure 'Golden Shoals' = "#AB7D2A"
+		displayFolder: Colors
+		lineageTag: 3b0953b5-7894-483c-9846-bc510aa07df9
+
+	measure Ironbar = "#28546D"
+		displayFolder: Colors
+		lineageTag: 28c1c4b6-167d-4b47-a9d4-7e6d43a2302d
+
+	measure Northhaven = "#7FAABC"
+		displayFolder: Colors
+		lineageTag: d2a53b17-599c-4dbd-80e6-9072dafe439c
+
+	measure Prairiebend = "#6A4E29"
+		displayFolder: Colors
+		lineageTag: 10ad7a42-7d7c-4764-be68-3ff2285ed982
+
+	measure Southmere = "#49724D"
+		displayFolder: Colors
+		lineageTag: 3b27b087-871a-4426-a1f5-fdfb99a0b3c9
+
+	measure Willowford = "#538EAC"
+		displayFolder: Colors
+		lineageTag: da8d65db-ca6c-4350-b78a-9a0b14b7ef17
+
+	measure Briarport = "#1D4777"
+		displayFolder: Colors
+		lineageTag: ae6f0901-820b-45d1-a23c-fe436c5b6c7e
+
+	measure 'Selected City Color' =
+			
+			SWITCH(
+			    [Selected City],
+			    "Ashgrove", "#366E40",
+			    "Cloudbreak", "#4E366E",
+			    "Crestwater", "#055964",
+			    "Eastwick", "#A44229",
+			    "Golden Shoals", "#AB7D2A",
+			    "Ironbar", "#28546D",
+			    "Northhaven", "#7FAABC",
+			    "Prairiebend", "#6A4E29",
+			    "Southmere", "#6A6D34",
+			    "Willowford", "#49724D",
+			    "Winterstead", "#538EAC"
+			    )
+		displayFolder: Colors
+		lineageTag: 1dc148f6-d4d2-4592-8130-ae1171833fba
+
+	measure Winterstead = "#538EAC"
+		displayFolder: Colors
+		lineageTag: bbe4afcf-259c-41ff-93b3-cb61749f07fa
+
+	measure 'VS alt Text' = ```
+			
+			VAR _CurrentCity = "Briarport"
+			VAR _SelectedCity = [Selected City]
+			
+			// Determine the winner for each category (Returns TRUE if Briarport Wins)
+			// Housing: Lower is Better
+			VAR _Win_Housing = [Housing Affordability vs Selected City] > 0
+			// Emissions: Lower is Better
+			VAR _Win_Emissions = [Emissions vs Selected City] > 0
+			// Green Space: Higher is Better
+			VAR _Win_GreenSpace = [Green Space vs Selected City] < 0
+			// Transit: Higher is Better
+			VAR _Win_Transit = [Transit vs Selected City] < 0
+			// Livability: Higher is Better
+			VAR _Win_Livability = [Livability vs Selected City] < 0
+			
+			// Count Briarport Wins (Convert Boolean to Integer ABS)
+			VAR _Score = 
+			    ABS(INT(_Win_Housing)) + 
+			    ABS(INT(_Win_Emissions)) + 
+			    ABS(INT(_Win_GreenSpace)) + 
+			    ABS(INT(_Win_Transit)) + 
+			    ABS(INT(_Win_Livability))
+			
+			// Determine Overall Winner
+			VAR _Winner = IF(_Score >= 3, _CurrentCity, _SelectedCity)
+			
+			// Build list of strengths for the winner
+			VAR _WinnerStrengths = 
+			    CONCATENATEX(
+			        FILTER(
+			            {
+			                (1, "Housing Affordability", _Win_Housing),
+			                (2, "Emissions", _Win_Emissions),
+			                (3, "Green Space", _Win_GreenSpace),
+			                (4, "Transit Score", _Win_Transit),
+			                (5, "Livability", _Win_Livability)
+			            },
+			            // If Briarport (Current) is winner, filter for True. If Selected is winner, filter for False
+			            [Value3] = IF(_Winner = _CurrentCity, TRUE(), FALSE())
+			        ),
+			        [Value2],
+			        ", ",
+			        [Value1] // Order by predetermined index
+			    )
+			
+			RETURN
+			    "Comparison chart between " & _CurrentCity & " and " & _SelectedCity & ". " & 
+			    "The overall winner is " & _Winner & ". " & 
+			    _Winner & " performs better in the following categories: " & _WinnerStrengths & "."
+			
+			```
+		displayFolder: Metrics\vs
+		lineageTag: 7fc30ad8-353c-47ee-92ea-c4ee253ae887
+
+	column City
+		dataType: string
+		isHidden
+		lineageTag: 6dce4cd5-3854-484f-a00a-926630f16a84
+		summarizeBy: none
+		sourceColumn: City
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 74e0e447-96d6-4154-9129-e80e7a16ba28
+		summarizeBy: none
+		sourceColumn: Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HousingAffordabilityIndex
+		dataType: double
+		isHidden
+		lineageTag: 19947918-baf7-4e7b-8ac9-3f6ec8e42e8d
+		summarizeBy: sum
+		sourceColumn: HousingAffordabilityIndex
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TransitScore
+		dataType: double
+		isHidden
+		lineageTag: 4525cde5-6bc6-4075-be07-0ce37b98e9e4
+		summarizeBy: sum
+		sourceColumn: TransitScore
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GreenSpacePct
+		dataType: double
+		isHidden
+		lineageTag: de9755c0-cf49-41d3-9d7d-745952e6c001
+		summarizeBy: sum
+		sourceColumn: GreenSpacePct
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EmissionsIndex
+		dataType: double
+		isHidden
+		lineageTag: a231db33-747c-4dff-90a8-4fcf1ea17e3c
+		summarizeBy: sum
+		sourceColumn: EmissionsIndex
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LivabilityComposite
+		dataType: double
+		isHidden
+		lineageTag: 11d26ef5-ae5e-4f7e-a1ff-27e34dbbfa47
+		summarizeBy: sum
+		sourceColumn: LivabilityComposite
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'City Metrics' = m
+		mode: import
+		source =
+				let
+				    // This data was manually populated in Power Query.
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("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", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [City = _t, Year = _t, HousingAffordabilityIndex = _t, TransitScore = _t, GreenSpacePct = _t, EmissionsIndex = _t, LivabilityComposite = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"City", type text}, {"Year", Int64.Type}, {"HousingAffordabilityIndex", type number}, {"TransitScore", type number}, {"GreenSpacePct", type number}, {"EmissionsIndex", type number}, {"LivabilityComposite", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

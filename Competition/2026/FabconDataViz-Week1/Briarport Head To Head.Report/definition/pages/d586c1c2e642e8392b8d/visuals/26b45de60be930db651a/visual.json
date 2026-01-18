@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "26b45de60be930db651a",
+  "position": {
+    "x": 599.16782246879325,
+    "y": 132.81689776196555,
+    "z": 7000,
+    "height": 350.74733096085407,
+    "width": 981.87788223626933,
+    "tabOrder": 5000
+  },
+  "visualGroup": {
+    "displayName": "Vs",
+    "groupMode": "ScaleMode",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Comparison of Briarport and the selected comparison city'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "4c3e0c4d0b2c3b3a20d6",
+      "displayName": "Container",
+      "children": [
+        "84870bc7dc5e1be058bc",
+        "83956651b1545c3ec2d0",
+        "2f314e372371a473a1d1",
+        "33692120521eb04107a7"
+      ]
+    },
+    {
+      "name": "1724f1b6b75c5ac0d502",
+      "displayName": "Trends",
+      "children": [
+        "9e306f485d6cc0175211",
+        "e3ef60b0a40d9ed49429"
+      ]
+    },
+    {
+      "name": "ed905850cc709eac1d5e",
+      "displayName": "Per Metric",
+      "children": [
+        "3445ddeb9d8528e9050a",
+        "dbe58766340925416d01"
+      ]
+    }
+  ]
+}

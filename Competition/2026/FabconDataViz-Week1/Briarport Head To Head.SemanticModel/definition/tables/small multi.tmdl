@@ -1,0 +1,64 @@
+table 'small multi'
+	lineageTag: 42c8dd37-ec04-4fb7-9fa3-17ef1e3b5b11
+
+	measure 'Small Multi Metric' =
+			
+			var metric = SELECTEDVALUE( 'small multi'[Metric] )
+			var metricType = SELECTEDVALUE( 'small multi'[type] )
+			RETURN
+			SWITCH(
+			    true,
+			    metricType = "Rank" && metric = "Emissions", [Emissions Rank],
+			    metricType = "Rank" && metric = "Green Space", [Green Space Rank],
+			    metricType = "Rank" && metric = "Housing Affordability", [Housing Affordability Rank],
+			    metricType = "Rank" && metric = "Transit", [Transit Rank],
+			    metricType = "Rank" && metric = "Livability", [Livability Rank],
+			    metricType = "Metric" && metric = "Emissions", [Emissions TY],
+			    metricType = "Metric" && metric = "Green Space", [Green Space TY] * 100,
+			    metricType = "Metric" && metric = "Housing Affordability", [Housing Affordability TY],
+			    metricType = "Metric" && metric = "Transit", [Transit TY],
+			    metricType = "Metric" && metric = "Livability", [Livability TY]
+			)
+		lineageTag: 456ce65a-6ea0-4e98-8622-0cf6491d0141
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Type
+		lineageTag: e033cfc0-b8f5-4e40-ad81-7e5231a6f9e9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Type]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Metric
+		lineageTag: abf3b161-e42d-4b73-a5b4-58884ff5d346
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Metric]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'small multi' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Type", STRING,
+				    "Metric", STRING,
+				    {
+				        {"Metric", "Emissions"},
+				        {"Metric","Green Space"},
+				        {"Metric","Housing Affordability"},
+				        {"Metric","Transit"},
+				        {"Metric","Livability"},
+				        {"Rank", "Emissions"},
+				        {"Rank","Green Space"},
+				        {"Rank","Housing Affordability"},
+				        {"Rank","Transit"},
+				        {"Rank","Livability"}
+				    }
+				)
+
+	annotation PBI_Id = c6bfa8ed79df4c1f893df5f2fb012b1e
+

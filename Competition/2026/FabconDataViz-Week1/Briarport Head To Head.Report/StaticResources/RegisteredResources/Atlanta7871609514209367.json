@@ -1,0 +1,66 @@
+{
+  "name": "Atlanta",
+  "dataColors": [
+    "#1E4C8A",
+    "#2F88C9",
+    "#E3353D",
+    "#E66943",
+    "#F9D317",
+    "#B4BFCA",
+    "#656B71",
+    "#2E3235"
+  ],
+  "bad": "#C44536",
+  "neutral": "#FFA500",
+  "good": "#228B22",
+  "visualStyles": {
+    "page": {
+      "*": {
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FAF9F6"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "*": {
+      "*": {
+        "visualHeader": [
+          {
+            "foreground": {
+              "solid": {
+                "color": "#473C34"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "textClasses": {
+    "label": {
+      "color": "#9F9387"
+    },
+    "title": {
+      "color": "#473C34"
+    },
+    "callout": {
+      "color": "#9F9387"
+    }
+  }
+}

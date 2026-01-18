@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Briarport Head To Head"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a1392941-79a3-4afe-83b1-faaeecd0658f"
+  }
+}

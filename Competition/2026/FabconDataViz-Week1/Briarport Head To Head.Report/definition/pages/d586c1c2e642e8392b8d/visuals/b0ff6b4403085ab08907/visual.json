@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "b0ff6b4403085ab08907",
+  "position": {
+    "x": 325.9388099420799,
+    "y": 552.49299914772234,
+    "z": 4062,
+    "height": 495.85445184631169,
+    "width": 1552.7511175273512,
+    "tabOrder": 3000
+  },
+  "visualGroup": {
+    "displayName": "Trends",
+    "groupMode": "ScaleMode",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Rank and Metric Trends for all Metrics over time. Select the Metric or Rank selector to swap between Rank and Metric graphs'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+table Monikers
+	lineageTag: cd38a76f-ed87-49fd-9bf2-74ca48a2de3e
+
+	measure 'Selected Moniker' = SELECTEDVALUE( Monikers[Moniker] )
+		lineageTag: 5d7a618f-8f84-4c59-8aaa-d77ef01fd53c
+
+	measure 'Selected Description' = SELECTEDVALUE( Monikers[Description] )
+		lineageTag: 7c41b807-0087-4893-911d-50ea8700c3f4
+
+	measure 'Selected Description Briarport' =
+			
+			CALCULATE(
+			    SELECTEDVALUE( Monikers[Description] ),
+			    TREATAS( { "Briarport" }, 'City Lookup'[City] )
+			)
+		lineageTag: 98cdd63d-f869-482a-9dae-ec0afbd1e756
+
+	column City
+		dataType: string
+		isHidden
+		lineageTag: 89529a90-0e29-4e04-9941-d814f521e5a6
+		summarizeBy: none
+		sourceColumn: City
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Moniker
+		dataType: string
+		lineageTag: 805453e7-955a-4e8e-98eb-311a177402af
+		summarizeBy: none
+		sourceColumn: Moniker
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: a003be79-7e21-4ba4-b07f-494dea9108ef
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Monikers = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("bZJNT+MwEIb/ilWuRWK7K+60W7VILaqAqocuh0kzTUY4djSetPTf79jEiACnRGP58bwf+/1oygTcepbRePRco9mBtShmR84h62yKQczSd4FcZe6OR88lFGRJLubelfg2ehnvR/fsXQHcI7ZWqAHRH/EtgU4fwb2aq1+GnFnRqb8/NgtGdOaphQOaf93NzeTWPDO4QJKoT76TukHGnjvz7sCo3L8YMC288ue43k8cwtKsQA8Hbybujqz156ikBy8RThczZQSpk+glVXUEzxsKgbwLn7SqM4IcBCFf3zA21DVmAyHoaBE5WYgpOjFrH1lvLerkhNnNRJtZ35WF3njNIi2CahFwJaQFp8NFen3vjk6+Spur4jMdMmzLhcLmxyMdCJ18JPF76EqGXv2J888RzFhfP2uWOdt3qx+72I7rbavTiVOj/fn7ivFg+iWeBN0wEBMW6LKDuVdWf60+5kDUqB6eGIPmJcrC2zJiaw82ZPOACx/d466qbAZ8SzPdf9DO1zWc0H3UK4i96KdpOsG+BYMcI2yYZSLdhbpif8o1XWNJ6voahX3rLcXltLqBtDNOTENlafFaCNm0yCqrARedefkP", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [City = _t, Moniker = _t, Description = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"City", type text}, {"Moniker", type text}, {"Description", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

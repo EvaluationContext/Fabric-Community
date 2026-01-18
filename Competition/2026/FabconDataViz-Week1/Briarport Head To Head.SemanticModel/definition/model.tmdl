@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["City Lookup","City Metrics","Monikers"]
+
+annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop","TMDLView_Desktop"]
+
+annotation __TEdtr = 1
+
+ref table 'City Lookup'
+ref table 'City Metrics'
+ref table Date
+ref table 'fp_Metrics, Ranks and Medals'
+ref table Monikers
+ref table fp_metrics
+ref table 'small multi'
+
+ref cultureInfo en-US
+

@@ -1,0 +1,380 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "55831b38ad01e005ed63",
+  "position": {
+    "x": 325.83143507972665,
+    "y": 552.16400911161736,
+    "z": 2000,
+    "height": 495.30751708428249,
+    "width": 1547.1526195899773,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Core Strengths",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "Housing Affordability (Score: 24.6 - Best in Class)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": ": Briarport is significantly more affordable than any peer. With an index of ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "24.6",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "compared to the peer average of ~40 and the most expensive (Winterstead at ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t"
+                  },
+                  {
+                    "value": "52.9), it is the most accessible city for residents financially.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "Emissions Efficiency (Score: 41.7 - Strong)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": ": The city remains environmentally clean, sitting near the top of the leaderboard for low ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "emissions, just behind the leader Cloudbreak (35.0).",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Weaknesses / Risks",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "Green Space Starvation (34.5% - Low)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": ": Briarport struggles significantly with urban greenery. At ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "34.5%",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": ", it is well below the leader (Ironbar at 53.7%) and sits in the bottom quartile. This lack of parks and vegetation is ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t"
+                  },
+                  {
+                    "value": "the primary anchor dragging down its overall Livability score.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "Livability Ceiling",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": ": Despite being cheap and clean, the city’s overall livability is stuck at ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "59.8",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": " (vs. Ironbar's 68.5). It proves that low cost alone does not create a \"Top Tier\" living experience; amenities matter.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Strategic Focus for Improvement",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "Recommendation: ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "To bridge the gap between \"Cheap\" and \"Livable,\" Briarport planners should prioritize ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": "Green Space expansion",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t"
+                  },
+                  {
+                    "value": "Action",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  },
+                  {
+                    "value": ": Convert low-density unused zones into pocket parks or green belts. Increasing Green Space from 34% to the ~45% peer average would likely vault Briarport from a mid-tier city to a top-3 contender, ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t"
+                  },
+                  {
+                    "value": "combining affordability with quality of life. Additionally Briarport should keep a eye on Transit, as it's score has declined over time, while other cities with similar or lower scores have started to overtake.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "black"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Analysis'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Strengths, weaknesses and recommendations for Briarport'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

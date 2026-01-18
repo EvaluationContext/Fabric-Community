@@ -1,0 +1,114 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 346,
+            "y": 179.41796875
+          },
+          "nodeIndex": "City Metrics",
+          "nodeLineageTag": "4b92ee6c-8789-4bf0-80e5-621598d99958",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "City Lookup",
+          "nodeLineageTag": "497ea5b1-fbee-4c4a-8ad2-e9ae64a32214",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 655,
+            "y": 0
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "61e57744-cfb4-43c9-817b-cc0767a6dc51",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 328.11328125
+          },
+          "nodeIndex": "Monikers",
+          "nodeLineageTag": "cd38a76f-ed87-49fd-9bf2-74ca48a2de3e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 912.99999618530273,
+            "y": 0
+          },
+          "nodeIndex": "fp_Metrics, Ranks and Medals",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 920.99999618530273,
+            "y": 161.056640625
+          },
+          "nodeIndex": "fp_metrics",
+          "nodeLineageTag": "993e8761-c612-4c6d-9b67-73c157421674",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 920.99999618530273,
+            "y": 324.056640625
+          },
+          "nodeIndex": "small multi",
+          "nodeLineageTag": "42c8dd37-ec04-4fb7-9fa3-17ef1e3b5b11",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": true,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

@@ -1,0 +1,27 @@
+table Date
+	lineageTag: 61e57744-cfb4-43c9-817b-cc0767a6dc51
+
+	column Year
+		formatString: 0
+		lineageTag: 12d6bb73-813f-4317-bf56-af1fe11acd77
+		isDefaultLabel
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: City Metrics[Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date = calculated
+		mode: import
+		source =
+				
+				VALUES( 'City Metrics'[Year] )
+
+	calendar Year
+		lineageTag: 7b636a6a-4dea-46e9-afc9-dbea2e31e5bc
+
+		calendarColumnGroup = year
+			primaryColumn: Year
+
+	annotation PBI_Id = 94d37084949e451b85faeef1c6d43699
+

@@ -1,0 +1,425 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "34c6ab6fac43c8b04182",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 326,
+    "width": 900,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "What The Data Represents                                                                                                ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "16pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "11pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "  ",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "16pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "USA cities included",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "Ashgrove, Briarport, Cloudbreak, Crestwater, Eastwick, Golden Shoals, Ironbar, Northhaven,",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
+                  },
+                  {
+                    "value": "Prairiebend, Southmere, Willowford and Winterstead.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "Date Range",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "2015–2024",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "Livability Metrics",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": ":",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "HousingAffordabilityIndex",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": " ",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "Lower is better; reflects housing cost burden.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "TransitScore",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "Higher is better; measures public transportation availability and convenience.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "GreenSpacePct",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "Higher is better; percentage of city land dedicated to parks and green areas.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "EmissionsIndex",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "Lower is better; indicates air pollution and greenhouse gas emissions.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "\t\t\t\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "LivabilityComposite",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "\t",
+                    "textStyle": {
+                      "color": "#333333"
+                    }
+                  },
+                  {
+                    "value": "Higher is better; an aggregated score (0–100) summarizing overall quality of life.",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#333333"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data Dictionary'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

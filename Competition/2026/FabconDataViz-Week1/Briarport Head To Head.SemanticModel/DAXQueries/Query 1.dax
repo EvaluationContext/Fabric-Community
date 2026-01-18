@@ -1,0 +1,21 @@
+/// Calcualte Rank of Metric for given Axis
+DEFINE function MetricRank = 
+    (
+        MetricAxis: anyref,
+        Metric: anyref expr
+    ) =>
+
+    RANK(
+        ALLSELECTED( MetricAxis ),
+        ORDERBY( Metric ),
+    )
+
+EVALUATE
+SUMMARIZECOLUMNS(
+    'City Lookup'[City],
+    "x",
+    MetricRank(
+        'City Lookup'[City],
+        [Sum Emission Index]
+    )
+)

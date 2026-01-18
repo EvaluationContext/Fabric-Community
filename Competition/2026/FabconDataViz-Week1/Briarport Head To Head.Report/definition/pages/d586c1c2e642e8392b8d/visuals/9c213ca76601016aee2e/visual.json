@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "9c213ca76601016aee2e",
+  "position": {
+    "x": 324.47554670803834,
+    "y": 549.74062155120794,
+    "z": 4000,
+    "height": 358.16920943134539,
+    "width": 1548.5244532919617,
+    "tabOrder": 1000
+  },
+  "visualGroup": {
+    "displayName": "Per Metric",
+    "groupMode": "ScaleMode",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Graphs and tables to show investigate trend and most recent values and ranks per specific metric'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "isHidden": true
+}

@@ -1,0 +1,34 @@
+DEFINE
+	MEASURE 'City Metrics'[Emissions Rank] =
+		RANK(
+			ALL( 'City Lookup'[City] ),
+			ORDERBY( [Emission Index TY], ASC )
+		)
+	VAR __DS0FilterTable = 
+		TREATAS({"Atlanta"}, 'City Lookup'[City])
+
+	VAR __DS0Core = 
+		SUMMARIZECOLUMNS(
+			'City Lookup'[City],
+			__DS0FilterTable,
+			"Selected_City", 'City Lookup'[Selected City],
+			"Emission_Index_TY", IGNORE('City Metrics'[Emission Index TY]),
+			"Green_Space_TY", IGNORE('City Metrics'[Green Space TY]),
+			"Housing_Affordability_TY", IGNORE('City Metrics'[Housing Affordability TY]),
+			"Transit_Score_TY", IGNORE('City Metrics'[Transit Score TY]),
+			"Livability_Composite_TY", IGNORE('City Metrics'[Livability Composite TY]),
+			"Emissions_Rank", 'City Metrics'[Emissions Rank],
+			"Green_Space_Rank", IGNORE('City Metrics'[Green Space Rank]),
+			"Housing_Affordability_Rank", IGNORE('City Metrics'[Housing Affordability Rank]),
+			"Transit_Rank", IGNORE('City Metrics'[Transit Rank]),
+			"Livability_Rank", IGNORE('City Metrics'[Livability Rank])
+		)
+
+	VAR __DS0BodyLimited = 
+		TOPN(22, __DS0Core, 'City Lookup'[City], 1)
+
+EVALUATE
+	__DS0BodyLimited
+
+ORDER BY
+	'City Lookup'[City]
