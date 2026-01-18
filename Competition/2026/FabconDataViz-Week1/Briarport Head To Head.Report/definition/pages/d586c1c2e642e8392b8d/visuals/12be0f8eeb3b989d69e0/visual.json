@@ -255,13 +255,6 @@
                 }
               }
             },
-            "showActionsInTooltips": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "transparency": {
               "expr": {
                 "Literal": {
